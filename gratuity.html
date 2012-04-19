@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+	<head>
+		<style type="text/css">
+			h1{
+				text-align:center;
+				margin:0;
+				color:white;
+			}
+		
+			h2 {
+				margin:0;
+			}
+			
+			p {
+				font-weight:bold;
+				margin:5px;
+			}
+			
+			#top{
+				background:#43454b;
+				-moz-border-radius:25px 25px 0 0;
+				padding:15px;
+				width:362px;
+			}
+			
+			#app{
+				background:#b5b5b5;
+				-moz-border-radius:0 0 25px 25px;
+				padding:15px;
+				width:362px;
+			}
+			
+			#containerTop{
+				text-align:center;
+				width:328;
+				padding:15px;
+				background:white;
+				-moz-border-radius:25px;
+			}
+			
+			#containerMain{
+				width:358px;
+				margin-top:10px;
+			}
+			
+			.note{
+				color:grey;
+				padding:0;
+			}
+			
+			.containerCalc1{
+				float:left;
+				padding:10px;
+				background:white;
+				-moz-border-radius:25px;
+			}
+			
+			.containerCalc2{
+				float:right;
+				padding:10px;
+				background:white;
+				-moz-border-radius:25px;
+			}
+			
+			#footer{
+				text-align:right;
+				color:grey;
+				margin-top 10px;
+				width:392;
+				font-size:10pt;
+			}
+			
+			.cb{
+				clear:both;
+			}
+		</style>
+		<script type="text/javascript">
+		
+			function totalCalculate()
+			{
+				var amount = document.getElementById('amount').value;
+				var tip = document.getElementById('tip').value;
+				
+				if(amount!=0){
+					var ans = (Math.round((amount*(1+ (tip/100)))*100))/100;
+					document.getElementById('TotalOut').innerHTML = "$" + ans;
+				}
+				else
+					document.getElementById('TotalOut').innerHTML = "No Amount";
+			}
+			
+			function tipCalculate(amount, total)
+			{
+				var amount = document.getElementById('amount').value;
+				var total = document.getElementById('total').value;
+				
+				if(amount!=0){
+					var ans = (Math.round((((total/amount) - 1)*100)*100))/100;
+					document.getElementById('TipOut').innerHTML = ans + "%";
+				}
+				else
+					document.getElementById('TipOut').innerHTML = "No Amount";
+			}
+			
+			
+		</script>
+		
+		<title>Gratuity Calculator</title>
+	</head>
+	
+	<body>
+			<div id="top">
+				<h1>Gratuity Calculator</h1>
+			</div>
+		
+			<div id="app">
+				<div id="containerTop">
+					<h2>Amount: </h2>
+					<input type='text' id='amount' value='0' /><br />
+				</div>
+				
+				<div id = "containerMain">
+					<div class="containerCalc1">
+						<h2>Tip:</h2> 
+						<div class="note">Tip amount in Percent</div><br />
+						<input type='text' id='tip' value='10' /><br />
+						<input type='button' onClick='totalCalculate()' value="Calculate Total" /><br />
+						<p id='TotalOut'>0</p>
+					</div>
+					
+					<div class="containerCalc2">
+						<h2>Total:</h2> 
+						<div class="note">Total after tips</div><br />
+						<input type='text' id='total' value='0' /><br />
+						<input type='button' onClick='tipCalculate()' value="Calculate Tip" /><br />
+						<p id='TipOut'>0</p>
+					</div>
+					
+					<div class="cb"></div>
+				</div>
+			</div>
+			
+			<div id="footer">
+				(c)Aaron Ming 2011
+			</div>
+			
+			<div class="cb"></div>
+	</body>
+</html>

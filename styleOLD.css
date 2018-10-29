@@ -1,0 +1,67 @@
+body{
+	font-family:verdana;
+}
+#main{
+	margin:0 auto;
+	width:800px;
+	max-width:800px;
+}
+#header{
+	
+}
+#header_title{
+	height:50px;
+	padding:10px;
+	position:relative;
+}
+#htitle{
+	font-family:Verdana;
+	font-size:35px;
+	font-weight:bold;
+	position:absolute;
+	bottom:-8;
+	left:0;
+}
+#header_links{
+	margin-top:0;
+	background-color: rgb(105,105,105);/* for non-css3 browsers */
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696969', endColorstr='#AAAAAA'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#696969), to(#AAAAAA)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #696969,  #AAAAAA); /* for firefox 3.6+ */ 
+	
+	border-left:black solid 1px; 
+	border-right:black solid 1px;
+	padding:10px;
+	text-align: right;
+}
+a.aWhite:link {
+	color: white; font-weight: bold; text-decoration:none;
+}
+a.aWhite:active {
+	color: white; font-weight: bold; text-decoration:none;
+}
+a.aWhite:visited {
+	color: white; font-weight: bold; text-decoration:none;
+}
+a.aWhite:hover {
+	color: white; font-weight: bolder; text-decoration:none;
+}
+a.aTitle:link{text-decoration:none;color:rgb(105,105,105);}
+a.aTitle:active{text-decoration:none;color:rgb(105,105,105);}
+a.aTitle:visited{text-decoration:none;color:rgb(105,105,105);}
+a.aTitle:hover{text-decoration:none;color:rgb(105,105,105);}
+
+#content{
+	margin:0 auto;
+	min-height:300px;
+	padding:10px 10px 30px;
+	border-left:black solid 1px; 
+	border-right:black solid 1px;
+	border-bottom:black solid 1px;
+	background-color:rgb(230,230,230);
+}
+
+.gameName{
+	font-size:20pt;
+}
